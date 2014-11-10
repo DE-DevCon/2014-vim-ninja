@@ -196,6 +196,8 @@
     \subsection{}
     \begin{frame}{Motions and Actions}
     \end{frame}
+    \begin{frame}{Dot Command}
+    \end{frame}
     % A word about plugins:
     % Get to know the base functionality first.  Many plugins extend or change
     % current functionality and add or overwrite key commands.  Make sure you
@@ -222,7 +224,8 @@
     \begin{frame}{How to install plugins}{Pathogen}
         \begin{itemize}
             \item Add pathogen.vim to ~/.vim/autoload
-            \item Add a line to your .vimrc
+            \item Add this line to your .vimrc
+                execute pathogen#infect()
             \item Plugins get loaded from ~/.vim/bundle
         \end{itemize}
     \end{frame}
