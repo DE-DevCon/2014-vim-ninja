@@ -121,16 +121,15 @@
     % \end{frame}
     \begin{frame}{vimtutor}
         \begin{itemize}
-            \item <alert@+> ... should be the first half hour you spend in vim.
-            \item <alert@+> ... primes you with the base functionality, but only enough to get you started.
-            \item <alert@+> ... most importantly shows you where to find the manual.
+            \item <alert@+> vimtutor is a primer for the base functionality, but it is only enough to get you started.
+            \item <alert@+> The most important thing you learn in vimtutor is where to find the manual.
         \end{itemize}
     \end{frame}
     \begin{frame}{Vim documentation}
         \begin{itemize}
-            \item <alert@+> ... is very exhaustive.
-            \item <alert@+> ... is not intended to be read completely.  % 6MB of text
-            \item <alert@+> ... is designed to be very easily searchable.
+            \item <alert@+> Vim has very exhaustive documentation.
+            \item <alert@+> It is not intended to be read completely.  % 6MB of text
+            \item <alert@+> Learn to use the search functionality (:helpgrep).
                 % This is a great place to demonstrate where to find vim
                 % documentation, how to search it and how to navigate it.
                 % Also mention that if vim doesn't do what you are looking for
@@ -156,6 +155,13 @@
     % allow you to record these operations and then play them back.  It is
     % clear to see how this would save you keystrokes, but recording the macro
     % in a repeatable way can be tricky.
+    \begin{frame}{Recognize mechanical operations}
+        \begin{itemize}
+            \item How often do I do this?
+            \item How long did it take me?
+            \item Can it be scripted?
+        \end{itemize}
+    \end{frame}
     \begin{frame}{Basic commands}
         \begin{itemize}
             \item q[0-9a-z] - start recording
@@ -172,6 +178,7 @@
             \item Try to avoid absolute motions.
             \item Use search motions, word motions, mark motions, etc.
         \end{itemize}
+        % TODO
         % This definitely calls for a demo.  Create a file just for this
         % demonstration with the macros spelled out.  Maybe even include a
         % naive example and show why it doesn't work. Maybe wrap a bunch of
@@ -197,9 +204,30 @@
     \end{frame}
     \section{Advanced techniques}
     \subsection{}
-    \begin{frame}{Motions and Actions}
+    \begin{frame}{Motions and Actions (Vim grammar)}
+        Actions
+        \begin{itemize}
+            \item Delete - d
+            \item Change - c
+            \item Yank (Copy) - y
+        \end{itemize}
+        Prepositions
+        \begin{itemize}
+            \item in - i
+            \item around - a
+        \end{itemize}
+        Motions
+        \begin{itemize}
+            \item Word motions -- w, W, b, B, e, ge, E, gE
+            \item Search motions -- t, T, f, F, /
+            \item Text object motions -- p, s, \}, ], ), $>$, t, ', "
+        \end{itemize}
     \end{frame}
     \begin{frame}{Dot Command}
+        \begin{itemize}
+            \item Think of this like an automatic mini macro.
+            \item Combine simple actions using the change(c) action.
+        \end{itemize}
     \end{frame}
     % A word about plugins:
     % Get to know the base functionality first.  Many plugins extend or change
@@ -235,9 +263,9 @@
     \begin{frame}{How to install plugins}{Git}
         Once you have Pathogen installed
         \begin{itemize}
-            \item Copy plugins to your bundle directory or
-            \item if the plugin is in git you can check it out to a directory in bundle or
-            \item take advantage of git submodules
+            \item Copy plugins to your bundle directory.
+            \item If the plugin is in git you can check it out to a directory in bundle.
+            \item Take advantage of git submodules.
                 % This is really useful if you like to keep your settings
                 % synchronized across two systems.
         \end{itemize}
@@ -246,5 +274,11 @@
     % showing the motivation behind split-join
     \subsection{Crafting your own plugins}
     \begin{frame}{Directory structure}
+        \begin{itemize}
+            \item plugin
+            \item ftplugin
+            \item autoload
+            \item doc
+        \end{itemize}
     \end{frame}
 \end{document}
