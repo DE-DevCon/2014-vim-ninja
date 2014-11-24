@@ -62,7 +62,9 @@
     \end{frame}
     % \subsection{The power of Vim}
     % Since I want to aim this talk at intermediate vim users this might be
-    % unnecessary.  It may be worth leaving if we bring in the :move command
+    % unnecessary.  It may be worth leaving if we bring in the :move command.
+    % Either way we should talk about how using the mouse can slow you down.
+    %
     % \defverbatim[colored]\lstLinesFlipped{
     %     \begin{lstlisting}
 % Second line.
@@ -130,11 +132,21 @@
             \item <alert@+> Vim has very exhaustive documentation.
             \item <alert@+> It is not intended to be read completely.  % 6MB of text
             \item <alert@+> Learn to use the search functionality (:helpgrep).
-                % TODO
                 % This is a great place to demonstrate where to find vim
                 % documentation, how to search it and how to navigate it.
                 % Also mention that if vim doesn't do what you are looking for
                 % natively, you might be able to find a plugin for it.
+                %
+                % Open a vim terminal and talk about a common mistake of
+                % transposing :q.  Explain how this error can be seen as an
+                % annoyance or as a learning opportunity.  :h q:
+                %
+                % commandLineWindow.txt
+                % Show how the command line window can be very powerful.  The
+                % command history can be traversed with the <up> <down> keys,
+                % but the command line window can be searched.  Think about
+                % what it means to search your searches.  Change master to
+                % grok.
         \end{itemize}
     \end{frame}
     \begin{frame}{Maintain a cheatsheet}
@@ -179,11 +191,12 @@
             \item Try to avoid absolute motions.
             \item Use search motions, word motions, mark motions, etc.
         \end{itemize}
-        % TODO
         % This definitely calls for a demo.  Create a file just for this
         % demonstration with the macros spelled out.  Maybe even include a
         % naive example and show why it doesn't work. Maybe wrap a bunch of
         % lines in an html tag.
+        %
+        % macros.js
     \end{frame}
     \section{Level up your .vimrc}
     \subsection{}
@@ -200,7 +213,6 @@
             \item Mappings are an easy way to bind macros to a key or combination of keys.
                 % Talk about leader commands
             \item Over time as you find ways to automate common operations with macros you can save them as mappings in you vimrc file.
-                % TODO
                 % Demonstrate how to paste a recorded macro as a mapping
         \end{itemize}
     \end{frame}
@@ -231,29 +243,8 @@
             \item Combine simple actions using the change(c) action.
         \end{itemize}
     \end{frame}
-    % A word about plugins:
-    % Get to know the base functionality first.  Many plugins extend or change
-    % current functionality and add or overwrite key commands.  Make sure you
-    % know what you are giving up for a plugin.  It may be better to use built
-    % in functionality.  Keep in mind that every plugin you add can potentially
-    % slow down vim's load time.  With that said, here a few of my favorites.
     \section{Plugins}
     \subsection{}
-    \begin{frame}{My Favorite Plugins}
-        \begin{itemize}
-            \item Editing tasks
-                \begin{itemize}
-                    \item Surround
-                    \item Ultisnips
-                \end{itemize}
-            \item Folding (Usually language specific)
-            \item Interface
-                \begin{itemize}
-                    \item fugitive
-                    \item CtrlP
-                \end{itemize}
-        \end{itemize}
-    \end{frame}
     \begin{frame}{How to install plugins}{Pathogen}
         \begin{itemize}
             \item Add pathogen.vim to \textasciitilde/.vim/autoload
@@ -281,6 +272,27 @@
             \item ftplugin
             \item autoload
             \item doc
+        \end{itemize}
+    \end{frame}
+    % A word about plugins:
+    % Get to know the base functionality first.  Many plugins extend or change
+    % current functionality and add or overwrite key commands.  Make sure you
+    % know what you are giving up for a plugin.  It may be better to use built
+    % in functionality.  Keep in mind that every plugin you add can potentially
+    % slow down vim's load time.  With that said, here a few of my favorites.
+    \begin{frame}{My Favorite Plugins}
+        \begin{itemize}
+            \item Editing tasks
+                \begin{itemize}
+                    \item Surround
+                    \item Ultisnips
+                \end{itemize}
+            \item Folding (Usually language specific)
+            \item Interface
+                \begin{itemize}
+                    \item fugitive
+                    \item CtrlP
+                \end{itemize}
         \end{itemize}
     \end{frame}
 \end{document}
