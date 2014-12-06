@@ -310,4 +310,40 @@
                 \end{itemize}
         \end{itemize}
     \end{frame}
+    \defverbatim[colored]\lstPluginOne{
+        \begin{lstlisting}
+function! splitJoinPhp#splitArray()
+  normal yi[`[i<return><esc>
+  " While we haven't reached the end of the line
+  while col('.') !=# col('$') - 1 && col('$') != 1
+    let l:currentChar = getChar()
+    if l:currentChar ==# ","
+      normal a<return><esc>
+    elseif l:currentChar ==# '("
+      normal yi(`]
+    endif
+    " Move the cursor to the right
+    normal l
+  endwhile
+        \end{lstlisting}
+    }
+    \defverbatim[colored]\lstPluginTwo{
+        \begin{lstlisting}
+  execute 'normal 0'
+  " There isn't already a trailing comma
+  if search('\v([^,])\]([^\]]*)$', '', line('.'))
+    s/\v([^,])\]([^\]]*)$/\1,\r\]\2/e
+  else
+    s/\v,\]([^\]]*)$/,\r\]\1/e
+  endif
+  silent normal =a]
+endfunction
+        \end{lstlisting}
+    }
+    \begin{frame}{PHP Array Split Plugin}
+        \lstPluginOne
+    \end{frame}
+    \begin{frame}{PHP Array Split Plugin}
+        \lstPluginTwo
+    \end{frame}
 \end{document}
