@@ -8,7 +8,7 @@
  * ( is the <return> key)
  */
 
-var $newdiv1 = $('<div/>'),
-    newdiv2 = document.createElement('div'),
-    existingdiv1 = document.getElementById('foo');
-$('body').append($newdiv1, [newdiv2, existingdiv1]);
+var $newdiv1 = $("<div/>"),
+    newdiv2 = document.createElement("div"),
+    existingdiv1 = document.getElementById("foo");
+$("body").append($newdiv1, [newdiv2, existingdiv1]);
