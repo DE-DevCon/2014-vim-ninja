@@ -1,0 +1,133 @@
+PHPUnit 4.3.5 by Sebastian Bergmann.
+
+Configuration read from /code/phpunit.xml
+
+F
+
+Time: 1.32 seconds, Memory: 12.50Mb
+
+There was 1 failure:
+
+1) SearchesControllerTest::postAction_createSearch
+Failed asserting that Array &0 (
+    'url' => '/vLatest/searches/37d7d3cd5aaa7f9ca521daaad1140e92'
+    'result' => Array &1 (
+        'resource' => 'cycles'
+        'terms' => Array &2 (
+            'classId' => Array &3 (
+                0 => '356953'
+            )
+            'categories' => Array &4 (
+                0 => Array &5 (
+                    'id' => '23456'
+                )
+            )
+            'makes' => Array &6 (
+                0 => Array &7 (
+                    'name' => 'BMW'
+                    'id' => '23456'
+                )
+                1 => Array &8 (
+                    'name' => 'HONDA'
+                    'id' => '12345'
+                )
+                2 => Array &9 (
+                    'name' => 'HONDA'
+                    'id' => '12345'
+                )
+                3 => Array &10 (
+                    'name' => 'HONDA'
+                    'id' => '123451'
+                )
+                4 => Array &11 (
+                    'id' => '67876'
+                )
+                5 => Array &12 (
+                    'id' => '8765675'
+                )
+                6 => Array &13 (
+                    'name' => 'TEST'
+                )
+            )
+            'models' => Array &14 (
+                0 => Array &15 (
+                    'name' => 'CBR 1000'
+                    'id' => '298989'
+                )
+            )
+            'state' => Array &16 (
+                0 => 'VA'
+            )
+            'minPrice' => 2
+            'maxPrice' => 2.2000000000000002
+            'latitude' => 3
+            'longitude' => 3.2999999999999998
+            'dealerId' => '23456'
+            'minWeight' => 123
+        )
+        'id' => '37d7d3cd5aaa7f9ca521daaad1140e92'
+    )
+) is identical to Array &0 (
+    'url' => '/vLatest/searches/37d7d3cd5aaa7f9ca521daaad1140e92'
+    'result' => Array &1 (
+        'resource' => 'cycles'
+        'terms' => Array &2 (
+            'classId' => Array &3 (
+                0 => '356953'
+            )
+            'categories' => Array &4 (
+                0 => Array &5 (
+                    'id' => '23456'
+                )
+            )
+            'makes' => Array &6 (
+                0 => Array &7 (
+                    'name' => 'BMW'
+                    'id' => '23456'
+                )
+                1 => Array &8 (
+                    'name' => 'HONDA'
+                    'id' => '12345'
+                )
+                2 => Array &9 (
+                    'name' => 'HONDA'
+                    'id' => '12345'
+                )
+                3 => Array &10 (
+                    'name' => 'HONDA'
+                    'id' => '123451'
+                )
+                4 => Array &11 (
+                    'id' => '67876'
+                )
+                5 => Array &12 (
+                    'id' => '8765675'
+                )
+                6 => Array &13 (
+                    'name' => 'test'
+                )
+            )
+            'models' => Array &14 (
+                0 => Array &15 (
+                    'name' => 'CBR 1000'
+                    'id' => '298989'
+                )
+            )
+            'state' => Array &16 (
+                0 => 'VA'
+            )
+            'minPrice' => 2
+            'maxPrice' => 2.2000000000000002
+            'latitude' => 3
+            'longitude' => 3.2999999999999998
+            'dealerId' => '23456'
+            'minWeight' => 123
+        )
+        'id' => '37d7d3cd5aaa7f9ca521daaad1140e92'
+    )
+).
+
+/code/tests/application/controllers/SearchesControllerTest.php:83
+                                     
+FAILURES!                            
+Tests: 1, Assertions: 4, Failures: 1.

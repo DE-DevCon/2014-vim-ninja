@@ -18,14 +18,6 @@
     \end{frame}
 
     \section{Intro}
-    % \begin{frame}{Who am I?}
-    %     \begin{itemize}
-    %         % Be quick, maybe cut this slide
-    %         \item robert.bittle@dominionenterprises.com
-    %         \item github.com/guywithnose
-    %     \end{itemize}
-    % \end{frame}
-
     % Find out where the audience is
     % Have you ever used vim before
     % Do you only use it when you are composing git commit messages?
@@ -37,6 +29,7 @@
             \item Vim is extremely complex % This is a pro and a con
             \item Vim is full of features that are not imediately discoverable
             \item Vim is designed for experienced developers not beginners.
+            \item Vim throws away everything you've learned about conventional editors and does things in a completely different way.
         \end{itemize}
         % It takes time to learn the complexity, but over time you learn the
         % commands and eventually it is all muscle memory.
@@ -60,53 +53,6 @@
         % Vim is able to have so many features because in normal mode
         % all of the keyboard is free for shortcuts.
     \end{frame}
-    % \subsection{The power of Vim}
-    % Since I want to aim this talk at intermediate vim users this might be
-    % unnecessary.  It may be worth leaving if we bring in the :move command.
-    % Either way we should talk about how using the mouse can slow you down.
-    %
-    % \defverbatim[colored]\lstLinesFlipped{
-    %     \begin{lstlisting}
-% Second line.
-% First line.
-    %     \end{lstlisting}
-    % }
-    % \defverbatim[colored]\lstArrow{
-    %     \begin{lstlisting}
-% -------->
-    %     \end{lstlisting}
-    % }
-    % \defverbatim[colored]\lstLinesCorrect{
-    %     \begin{lstlisting}
-% First line.
-% Second line.
-    %     \end{lstlisting}
-    % }
-    % \begin{frame}{Moving text}{What we want to do}
-    %     \begin{multicols}{3}
-    %         \lstLinesFlipped
-    %         \columnbreak
-    %         \pause
-    %         \lstArrow
-    %         \columnbreak
-    %         \lstLinesCorrect
-    %     \end{multicols}
-    % \end{frame}
-    % \begin{frame}{Moving text}{How we can do it}
-    %     \begin{itemize}
-    %         \item <alert@+> Standard text editor
-    %         \begin{itemize}
-    %             % Using mouse
-    %             \item <alert@+> Highlight with mouse and drag
-    %             \item <alert@+> Highlight with mouse, Ctrl-x, Down, Ctrl-v
-    %             \item <alert@+> Home, Shift-Down, Ctrl-x, Down, Ctrl-v (8 keystrokes)
-    %         \end{itemize}
-    %         \item <alert@+> Vim
-    %         \begin{itemize}
-    %             \item <alert@+> dd(Cut a line)p(Paste) (3 keystrokes)
-    %         \end{itemize}
-    %    \end{itemize}
-    % \end{frame}
     \section{How to learn Vim}
     % I only have an hour today, so I can only scratch the surface of vim's
     % capabilities and lets be honest if I only show you a few things that I
@@ -115,12 +61,6 @@
     % best learned over time.  The only way I know how to master vim is by
     % learning a small number of things at a time over a long period of time.
     \subsection{}
-    % \begin{frame}{Learn the basic commands}
-    %     \begin{itemize}
-    %         \item <alert@+> vimtutor
-    %         \item <alert@+> Vim documentation
-    %     \end{itemize}
-    % \end{frame}
     \begin{frame}{vimtutor}
         \begin{itemize}
             \item vimtutor is a primer for the base functionality, but it is only enough to get you started.
@@ -146,8 +86,7 @@
                 % Show how the command line window can be very powerful.  The
                 % command history can be traversed with the <up> <down> keys,
                 % but the command line window can be searched.  Think about
-                % what it means to search your searches.  Change master to
-                % grok.
+                % what it means to search your searches.
                 %
                 % Open help for /
                 % :helpgrep spell check
@@ -181,10 +120,10 @@
     \end{frame}
     \begin{frame}{Basic commands}
         \begin{itemize}
-            \item q[0-9a-z] - start recording
+            \item q[a-z] - start recording
             \item Do something that is repeatable
             \item q - stop recording
-            \item @[0-9a-z]
+            \item @[a-z]
             \item :help complex-repeat
         \end{itemize}
     \end{frame}
@@ -251,11 +190,11 @@
     \end{frame}
     \begin{frame}{Autocomplete}
         \begin{itemize}
-            \item Ctrl-P
-            \item Ctrl-N
-            \item Ctrl-X Ctrl-L
-            \item Ctrl-X Ctrl-F
-            \item Ctrl-X Ctrl-O
+            \item Ctrl-P - Autocomplete searching backword
+            \item Ctrl-N - Autocomplete searching forward
+            \item Ctrl-X Ctrl-L - Linewise autocomplete
+            \item Ctrl-X Ctrl-F - Autocomplete filenames
+            \item Ctrl-X Ctrl-O - Omni completion
         \end{itemize}
     \end{frame}
     \section{Plugins}
